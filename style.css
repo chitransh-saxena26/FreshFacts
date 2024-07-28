@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    color: var(--primary-text-color);
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+
+.container{
+    max-width: 1200px;
+    overflow: hidden;
+    margin-inline: auto;
+}
+
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 45;
+    left: 0;
+    right: 0;
+}
+
+.main-nav{
+    justify-content: space-around;
+    padding: 6px 0;
+}
+
+.fresfacts-logo img{
+    width: 120px;
+}
+
+.nav-links ul{
+    gap: 20px;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.hover-link{
+    cursor: pointer;
+}
+
+.hover-link:hover{
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active{
+    color: red;
+}
+
+.nav-items.active{
+    color: var(--accent-color);
+}
+
+.search-bar{
+    height: 35px;
+    gap: 10px;
+}
+
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+}
+
+.search-button{
+    background-color: var(--accent-color);
+    color: #fff;
+    height: 100%;
+    padding: 0 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+}
+
+.search-button:hover{
+    background-color: var(--accent-color-dark);
+}
+
+.logo-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+main{
+    padding: 20px;
+}
+
+.spinner-container {
+    max-width: calc(100vw - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+}
+
+.spinner{
+    border: 14px solid #f3f3f3;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    animation: spin 2s infinite linear;
+    border-top: 15px solid #3498db;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.card-container{
+    z-index: -1000;
+    min-height: calc(100vh - 80px);
+    max-width: calc(100vw - 100px);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    gap: 20px;
+    display: none;
+    align-items: start;
+}
+
+.card{
+    width: 280px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+
+}
+
+.card-header img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 12px;
+}
+
+.news-source{
+    margin-block: 12px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page-btn{
+    margin: 0 40px;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+}
+
+.page-btn:hover{
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+#back-to-top{
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    display: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+}
+
+.menu-icon, .close-icon{
+    font-size: 24px;
+    display: none;
+    background-color: transparent;
+    color: #000;
+    border: none;
+}
+
+.side-navbar button{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.close-icon{
+    margin: 10px 0 0 40px;
+}
+
+.wrapper{
+    margin: 10px;
+}
+
+.side-navbar{
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    width: 300px;
+    background-color: #f3faff;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.side-navbar li{
+    font-weight: 700;
+    height: 50px;
+    width: 100%;
+    color: var(--primary-text-color);
+    margin-left: 40px;
+}
+
+.side-navbar a{
+    width: 100%;
+}
+
+@media screen and (max-width:960px){
+    .nav-links{
+        display: none;
+    }
+
+    .main-nav{
+        margin: 0 50px;
+        justify-content: space-between;
+    }
+
+    .menu-icon, .close-icon{
+        display: inline;
+    }
+
+    .card{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:720px){
+    .card{
+        width: 80%;
+        max-height: 800px;
+    }
+
+    .card-header img{
+        height: fit-content;
+    }
+}
+@media screen and (max-width:640px){
+    .main-nav{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .card-container{
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .news-input{
+        width: 150px;
+        height: 30px;
+    }
+
+    .search-button{
+        height: 30px;
+        text-align: center;
+    }
+
+    #back-to-top, .page-btn{
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        font-size: 15px;
+    }
+}

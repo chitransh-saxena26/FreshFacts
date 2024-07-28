@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshFacts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <ul class="side-navbar">
+                <button onclick=hideSidebar() class="close-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <li id="entertainment" class="hover-link nav-items" onclick="onNavClick('entertainment')">
+                    Entertainment</li>
+                <li id="sports" class="hover-link nav-items" onclick="onNavClick('sports')">Sports</li>
+                <li id="health" class="hover-link nav-items" onclick="onNavClick('health')">Health</li>
+                <li id="politics" class="hover-link nav-items" onclick="onNavClick('politics')">Politics</li>
+                <li id="technology" class="hover-link nav-items" onclick="onNavClick('technology')">Technology</li>
+            </ul>
+        </div>
+        <div class="main-nav container flex">
+            <div class="logo-menu">
+                <button onclick=showSidebar() class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="#" onclick="reload()" class="fresfacts-logo">
+                    <img src="FreshFacts.png" alt="" class="logo">
+                </a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <ul class="flex">
+                    <li id="entertainment" class="hover-link nav-items" onclick="onNavClick('entertainment')">
+                        Entertainment</li>
+                    <li id="sports" class="hover-link nav-items" onclick="onNavClick('sports')">Sports</li>
+                    <li id="health" class="hover-link nav-items" onclick="onNavClick('health')">Health</li>
+                    <li id="politics" class="hover-link nav-items" onclick="onNavClick('politics')">Politics</li>
+                    <li id="technology" class="hover-link nav-items" onclick="onNavClick('technology')">Technology</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id="news-input" placeholder="e.g Gaming">
+                <button class="search-button" id="search-btn">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="spinner-container" id="loading">
+            <div class="spinner"></div>
+        </div>
+        <div class="card-container container" id="card-container">
+        </div>
+    </main>
+
+    <template id="news-template">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 20/06/2024</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a
+                    veritatis eius explicabo delectus atque, praesentium quaerat impedit amet modi.</p>
+            </div>
+        </div>
+    </template>
+    <!-- Back to Top Button -->
+    <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer>
+        <button class="page-btn" id="prev-page" style="display: none;"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="page-btn" id="next-page" style="display: none;"><i
+                class="fa-solid fa-chevron-right"></i></button>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
