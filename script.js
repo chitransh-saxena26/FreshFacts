@@ -5,8 +5,7 @@ let currentQuery;
 let prevBtn = document.getElementById('prev-page');
 let nextBtn = document.getElementById('next-page');
 
-
-window.addEventListener('load', () => fetchNews("India"));
+window.addEventListener('load', () => fetchNews('india'));
 
 function reload(){
     window.location.reload();
@@ -43,8 +42,8 @@ function fillDataInCard(cardClone, article){
     const newsSource = cardClone.querySelector('#news-source');
     const newsDesc = cardClone.querySelector('#news-desc');
     newsImg.src = article.urlToImage;
-    newsTitle.innerHTML = article.title;
-    newsDesc.innerHTML = article.description;
+    newsTitle.innerHTML = `${article.title.slice(0,60)}...`;
+    newsDesc.innerHTML = `${article.description.slice(0,100)}...`;
 
     const date = new Date(article.publishedAt).toLocaleString("en-US", { timeZone: 'Asia/Jakarta'     
     })
