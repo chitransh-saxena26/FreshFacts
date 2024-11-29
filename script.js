@@ -1,4 +1,9 @@
 const url = "https://newsapi.org/v2/everything?q="
+
+import ENV from './config.js';
+
+const API_KEY = ENV;
+
 let currentPage = 1;
 const pageSize = 20;
 let currentQuery;
@@ -15,7 +20,7 @@ async function fetchNews(query, page = 1){
     document.getElementById('loading').style.display = 'flex';
     currentQuery = query;
     currentPage = page;
-    const res = await fetch(`${url}${query}&sortBy=publishedAt&pageSize=${pageSize}&page=${page}&apikey=a45d9df4da2d437a8e4e8fabc708c68d`);
+    const res = await fetch(`${url}${query}&sortBy=publishedAt&pageSize=${pageSize}&page=${page}&apikey=${API_KEY}`);
     const data = await res.json();
     nextBtn.style.display = 'block'
     document.getElementById('loading').style.display = 'none';
