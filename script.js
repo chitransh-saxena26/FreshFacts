@@ -1,8 +1,5 @@
+const API_KEY = 'a45d9df4da2d437a8e4e8fabc708c68d';
 const url = "https://newsapi.org/v2/everything?q="
-
-import ENV from './config.js';
-
-const API_KEY = ENV;
 
 let currentPage = 1;
 const pageSize = 20;
