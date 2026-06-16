@@ -34,10 +34,10 @@ Welcome to FreshFacts, a comprehensive news viewing website designed to provide 
 ## Screenshots
 
 ### HomePage
-![](images/Freshfacts_Homepage.png)
+![](images/Freshfacts_Homepage)
 
 ### Search result
-![](images/Freshfact_searchResult.png)
+![](images/Freshfact_searchResult)
 
 ## Installation
 
