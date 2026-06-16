@@ -9,6 +9,7 @@ Welcome to FreshFacts, a comprehensive news viewing website designed to provide 
 
 - Features
 - Technologies Used
+- Screenshots
 - Installation
 - Usage
 - Contributing
@@ -30,7 +31,13 @@ Welcome to FreshFacts, a comprehensive news viewing website designed to provide 
 - API Integration: NewsAPI
 - Version Control: Git, GitHub
 
+## Screenshots
 
+### HomePage
+![](images/Freshfacts_Homepage.png)
+
+### Search result
+![](images/Freshfact_searchResult.png)
 
 ## Installation
 
